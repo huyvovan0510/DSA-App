@@ -1,0 +1,27 @@
+{
+    "platforms": {},
+    "plugins": {},
+    "extendsTemplate": "@rnv/template-starter/renative.json",
+    "projectName": "DSA-App",
+    "workspaceID": "rnv",
+    "defaults": {
+        "title": "DSA-App",
+        "id": "com.mycompany.dsa-app",
+        "supportedPlatforms": [
+            "ios",
+            "android",
+            "androidtv",
+            "web",
+            "tvos"
+        ]
+    },
+    "engines": {},
+    "templates": {
+        "@rnv/template-starter": {
+            "version": "0.37.0"
+        }
+    },
+    "currentTemplate": "@rnv/template-starter",
+    "isNew": true,
+    "isMonorepo": false
+}
