@@ -1,6 +1,17 @@
 {
     "platforms": {},
-    "plugins": {},
+    "plugins": {
+        "@react-native-community/cli-platform-ios": "source:rnv",
+        "@react-native-community/cli": "source:rnv",
+        "react-native-tvos": "source:rnv",
+        "react-native-web": "source:rnv",
+        "next": "source:rnv",
+        "@flexn/shopify-flash-list": "source:rnv",
+        "@monterosa/react-native-parallax-scroll": "source:rnv",
+        "@noriginmedia/react-spatial-navigation": "source:rnv",
+        "@react-native-community/blur": "source:rnv",
+        "react-native-snap-carousel": "source:rnv"
+    },
     "extendsTemplate": "@rnv/template-starter/renative.json",
     "projectName": "DSA-App",
     "workspaceID": "rnv",
@@ -22,6 +33,5 @@
         }
     },
     "currentTemplate": "@rnv/template-starter",
-    "isNew": true,
     "isMonorepo": false
 }
