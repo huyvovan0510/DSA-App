@@ -12,7 +12,7 @@ Welcome to the DSA-App project! This README file will guide you through the setu
 
 Here is the result of our DSA-App:
 
-![DSA-App Result](https://im.ge/i/Screenshot-2024-03-17-at-6-22-05PM.RPKNqP)
+![DSA-App Result](https://firebasestorage.googleapis.com/v0/b/together-6c551.appspot.com/o/Screenshot%202024-03-17%20at%206.22.05%E2%80%AFPM.png?alt=media&token=c5413233-bc38-47c1-b2a5-c8a788ab7d1f)
 
 ## Required Setup
 
