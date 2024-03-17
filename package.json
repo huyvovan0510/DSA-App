@@ -1,18 +1,18 @@
 {
     "devDependencies": {
-        "typescript": "4.9.5",
+        "@flexn/assets-renative-outline": "0.3.2",
+        "@flexn/typescript": "0.1.6",
+        "@rnv/engine-rn": "0.37.0",
+        "@rnv/engine-rn-next": "0.37.0",
+        "@rnv/engine-rn-tvos": "0.37.0",
+        "@rnv/template-starter": "0.37.0",
         "@types/react": "18.2.6",
         "@types/react-dom": "~18.2.4",
         "@types/react-native": "~0.67.2",
-        "@flexn/typescript": "0.1.6",
-        "@flexn/assets-renative-outline": "0.3.2",
-        "rnv": "0.37.4",
-        "@rnv/template-starter": "0.37.0",
-        "@rnv/engine-rn": "0.37.4",
-        "@rnv/engine-rn-tvos": "0.37.4",
-        "@rnv/engine-rn-next": "0.37.4",
-        "xcode": "2.1.0",
-        "jetifier": "1.6.5"
+        "jetifier": "1.6.5",
+        "rnv": "^0.37.0",
+        "typescript": "4.9.5",
+        "xcode": "2.1.0"
     },
     "browserslist": {
         "production": [
@@ -33,21 +33,26 @@
     "name": "DSA-App",
     "version": "0.1.0",
     "dependencies": {
+        "@flexn/create": "^1.3.0-alpha.13",
+        "@flexn/shopify-flash-list": "1.4.8",
+        "@monterosa/react-native-parallax-scroll": "1.8.0",
+        "@noriginmedia/react-spatial-navigation": "2.12.9",
+        "@react-native-community/cli": "^6.0.0",
+        "@react-native-community/cli-platform-ios": "^6.0.0",
         "@rnv/renative": "0.37.4",
+        "add": "^2.0.6",
+        "next": "12.1.6",
+        "plugin": "^0.3.3",
         "react": "18.2.0",
         "react-art": "18.2.0",
         "react-dom": "18.2.0",
         "react-native": "0.67.2",
         "react-native-gesture-handler": "2.9.0",
-        "@react-native-community/cli-platform-ios": "^6.0.0",
-        "@react-native-community/cli": "^6.0.0",
+        "react-native-linear-gradient": "2.6.2",
+        "react-native-snap-carousel": "3.9.1",
         "react-native-tvos": "0.66.3-1",
+        "react-native-vector-icons": "9.2.0",
         "react-native-web": "0.18.9",
-        "next": "12.1.6",
-        "@flexn/shopify-flash-list": "1.4.8",
-        "@monterosa/react-native-parallax-scroll": "1.8.0",
-        "@noriginmedia/react-spatial-navigation": "2.12.9",
-        "@react-native-community/blur": "4.3.0",
-        "react-native-snap-carousel": "3.9.1"
+        "react-native-web-linear-gradient": "1.1.2"
     }
 }

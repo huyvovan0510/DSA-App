@@ -6,76 +6,39 @@ import {
 	PixelRatio,
 	TouchableOpacity,
 	FlatList,
-	StyleSheet,
-	TVFocusGuideView
+	Platform
 } from 'react-native';
 import { Api } from '@rnv/renative';
-import {
-	ICON_LOGO,
-	CONFIG,
-	ThemeProvider,
-	ThemeContext,
-	testProps
-} from '../config';
+import { CONFIG, ThemeProvider, ThemeContext, testProps } from '../config';
 import packageJson from '../../package.json';
 
-const App = () => (
-	<ThemeProvider>
-		<AppThemed />
-	</ThemeProvider>
+import {
+	App,
+	StyleSheet,
+	Pressable,
+	Screen,
+	FocusContext
+} from '@flexn/create';
+import { BaseButton } from '../components';
+import { HomeScreen } from '../screens';
+
+const Container = Platform.isTV ? App : View;
+const Main = () => (
+	<Container style={{ flex: 1 }}>
+		<Screen style={styles.container}>
+			<HomeScreen />
+		</Screen>
+	</Container>
 );
 
-const AppThemed = () => {
-	const { theme, toggle }: any = useContext(ThemeContext);
+export default Main;
 
-	const [pixelRatio, setPixelRatio] = useState(1);
-	const [fontScale, setFontScale] = useState(1);
-
-	useEffect(() => {
-		setPixelRatio(PixelRatio.get());
-		setFontScale(PixelRatio.getFontScale());
-	}, []);
-
-	const data = Array.from(Array(10).keys());
-
-	const renderItem = ({ item, index }) => {
-		return (
-			<TVFocusGuideView>
-				<TouchableOpacity
-					style={styles.items}
-					onPress={() => {
-						console.log('\x1b[35;1m ~ renderItem ~ onPress:', index);
-					}}
-				>
-					<View>
-						<Text>{index}</Text>
-					</View>
-				</TouchableOpacity>
-			</TVFocusGuideView>
-		);
-	};
-
-	return (
-		<View style={theme.styles.container}>
-			<Image
-				style={theme.styles.image}
-				source={ICON_LOGO}
-				{...testProps('template-starter-home-screen-renative-image')}
-			/>
-			<FlatList data={data} renderItem={renderItem} />
-		</View>
-	);
-};
-
-export default App;
 const styles = StyleSheet.create({
-	items: {
-		margin: 30,
-		width: 50,
-		height: 50,
-		justifyContent: 'center',
-		alignItems: 'center',
-		borderWidth: 1,
-		backgroundColor: 'red'
+	container: {
+		flex: 1,
+		backgroundColor: '#000'
+	},
+	scrollStyle: {
+		paddingBottom: 100
 	}
 });
