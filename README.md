@@ -51,9 +51,7 @@ To build the DSA-App project, follow these steps:
    rnv run -p [Platform]
    ```
 
-   ```bash
    When building for the web platform, ensure that the version of flexn/create in your renative.json file is set to 0.21.0-alpha.0 for successful execution. You can manually edit the renative.json file to make this change.
-   ```
 
    Replace `[Platform]` with the desired platform (e.g., `ios`, `android`, `web`, `tvos`, `androidtv`).
 
