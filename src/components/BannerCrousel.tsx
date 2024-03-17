@@ -26,10 +26,14 @@ const BannerCrousel = ({ focusContext }: BannerCrouselProps) => {
 	const [isError, setIsError] = useState(false);
 
 	const callBE = async () => {
-		// const respone = await DSAServices.getTopTenList();
-		// const { data } = respone || {};
-		// console.log('\x1b[35;1m ~ callBE ~ data:', JSON.stringify(data));
-		setTopTenData(MovieData);
+		try {
+			const respone = await DSAServices.getTopTenList();
+			const { data } = respone || {};
+
+			setTopTenData(data);
+		} catch (error) {
+			setIsError(true);
+		}
 	};
 	useEffect(() => {
 		callBE();

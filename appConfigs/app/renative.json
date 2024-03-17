@@ -1,14 +1,14 @@
 {
-    "extendsTemplate": "@rnv/template-starter/appConfigs/base/renative.json",
-    "id": "app",
-    "common": {
-        "id": "com.mycompany.dsa-app",
-        "title": "DSA-App",
-        "description": "ReNative App",
-        "buildSchemes": {},
-        "runtime": {
-            "welcomeMessage": "Hello ReNative!"
-        }
-    },
-    "platforms": {}
+	"extendsTemplate": "@rnv/template-starter/appConfigs/base/renative.json",
+	"id": "app",
+	"common": {
+		"id": "com.mycompany.dsaapp",
+		"title": "DSA-App",
+		"description": "ReNative App",
+		"buildSchemes": {},
+		"runtime": {
+			"welcomeMessage": "Hello ReNative!"
+		}
+	},
+	"platforms": {}
 }

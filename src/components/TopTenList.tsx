@@ -1,23 +1,7 @@
-import React, { useEffect, useMemo, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
-import {
-	App,
-	StyleSheet,
-	Pressable,
-	Screen,
-	FocusContext,
-	CreateListRenderItemInfo,
-	FlashList
-} from '@flexn/create';
-import {
-	FlatList,
-	Image,
-	ImageBackground,
-	StyleProp,
-	Text,
-	View,
-	ViewStyle
-} from 'react-native';
+import { StyleSheet, Pressable, Screen, FocusContext } from '@flexn/create';
+import { FlatList, Image, ImageBackground, Text, View } from 'react-native';
 import { DSAServices } from '../services';
 import { BaseButton } from './BaseButton';
 import { MovieData } from '../mock';
@@ -35,9 +19,14 @@ const TopTenList = ({ focusContext }: TopTenListProps) => {
 	const [isError, setIsError] = useState(false);
 
 	const callBE = async () => {
-		// const { data } = await DSAServices.getTopTenList();
-		// setTopTenData(data);
-		setTopTenData(MovieData);
+		try {
+			const respone = await DSAServices.getTopTenList();
+			const { data } = respone || {};
+
+			setTopTenData(data);
+		} catch (error) {
+			setIsError(true);
+		}
 	};
 	useEffect(() => {
 		callBE();
@@ -80,7 +69,7 @@ const TopTenList = ({ focusContext }: TopTenListProps) => {
 
 	return (
 		<Screen style={styles.listContainer}>
-			{true ? (
+			{isError ? (
 				<Pressable style={styles.errorSpace} focusContext={focusContext}>
 					<Image source={Empty} style={styles.emptyBoxImage} />
 					<Text style={styles.txtError}>
