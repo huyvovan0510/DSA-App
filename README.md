@@ -10,6 +10,10 @@ Welcome to the DSA-App project! This README file will guide you through the setu
 - tvOS
 - Android TV
 
+Here is the result of our DSA-App:
+
+![DSA-App Result](https://im.ge/i/Screenshot-2024-03-17-at-6-22-05PM.RPKNqP)
+
 ## Required Setup
 
 Before you begin, please ensure that you have the following dependencies installed on your system:
